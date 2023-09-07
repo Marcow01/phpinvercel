@@ -19,9 +19,12 @@
         </div>
         
     </header>
-    <main class="flex justify-center">
+
+
+    <main class="flex justify-center mt-10">
         <section class="text-gray-600 body-font max-w-screen-lg">
-            <div class="container px-5 py-24 mx-auto">
+            <div class="container px-5 mx-auto">
+                <div class="py-3 mb-3 w-full border-b">PIZZA'S</div>
               <div class="flex flex-wrap -m-4">
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
                   <a class="block relative h-48 rounded-lg overflow-hidden">
@@ -125,12 +128,123 @@
         </section>
     </main>
 
+    <main class="flex justify-center mt-10 py-10">
+        <section class="text-gray-600 body-font max-w-screen-lg">
+            <div class="container px-5 mx-auto">
+                <div class="py-3 mb-3 w-full border-b">REFRIGERANTES</div>
+              <div class="flex flex-wrap -m-4">
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded-lg overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dcdn.mitiendanube.com/stores/001/266/031/products/coca-2lt-site1-3fe594a7cce8f4f97c16402142098102-480-0.png">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">REFRIGERANTE</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">Coca Cola - 2L</h2>
+                    <p class="mt-1">$10.00</p>
+                    <button onclick="adicionarAoCarrinho('Peperoni', 16.00)" class="bg-yellow-500 p-3 mt-2 text-white rounded-lg w-full flex justify-between">
+                        Adicionar ao Carrinho
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                        </svg>
+                    </button>
+                    <button class="bg-red-500 p-3 mt-2 text-white rounded-lg w-full flex justify-between itens-center" style="display: none;" id="removerPeperoni" onclick="removerDoCarrinho('Peperoni', 16.00)">
+                        Remover do Carrinho
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                        </svg>  
+                    </button>
+                  </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded-lg overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://f.i.uol.com.br/fotografia/2020/10/29/16040090745f9b3c7216820_1604009074_3x2_md.jpg">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">REFRIGERANTE</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">Guarana Jesus - 2L</h2>
+                    <p class="mt-1">$8.00</p>
+
+                    <button onclick="adicionarAoCarrinho('Quatro queijos', 21.15)" class="bg-yellow-500 p-3 mt-2 text-white rounded-lg w-full flex justify-between">
+                        Adicionar ao Carrinho
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                        </svg>
+                    </button>
+
+                    <button class="bg-red-500 p-3 mt-2 text-white rounded-lg w-full flex justify-between itens-center" style="display: none;" id="removerQuatroqueijos" onclick="removerDoCarrinho('Quatro queijos', 21.15)">
+                        Remover do Carrinho
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                        </svg>  
+                    </button>
+
+                  </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded-lg overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://leianoticias.com.br/wp-content/uploads/2017/12/refrigerante-sprite-gelo-1117-1400x800.jpg">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">REFRIGERANTE</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">Sprite - 2L</h2>
+                    <p class="mt-1">$8.00</p>
+
+                    <button onclick="adicionarAoCarrinho('Marguerita', 12.00)" class="bg-yellow-500 p-3 mt-2 text-white rounded-lg w-full flex justify-between">
+                        Adicionar ao Carrinho
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                        </svg>
+                    </button>
+
+                    <button class="bg-red-500 p-3 mt-2 text-white rounded-lg w-full flex justify-between itens-center" style="display: none;" id="removerMarguerita" onclick="removerDoCarrinho('Marguerita', 12.00)">
+                        Remover do Carrinho
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                        </svg>  
+                    </button>
+
+                  </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded-lg overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://www.eatthis.com/wp-content/uploads/sites/4/2023/02/pepsi-can-bottle-ice.jpg?quality=82&strip=1">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">REFRIGERANTE</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">Pepsi - 2L</h2>
+                    <p class="mt-1">$9.00</p>
+
+                    <button onclick="adicionarAoCarrinho('Moda da casa', 18.40)" class="bg-yellow-500 p-3 mt-2 text-white rounded-lg w-full flex justify-between">
+                        Adicionar ao Carrinho
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                        </svg>
+                    </button>
+
+                    <button class="bg-red-500 p-3 mt-2 text-white rounded-lg w-full flex justify-between itens-center" style="display: none;" id="removerModadacasa" onclick="removerDoCarrinho('Moda da casa', 18.40)">
+                        Remover do Carrinho
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                        </svg>  
+                    </button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+    </main>
+
     <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-2xl max-h-full">
             <div class="relative bg-white rounded-lg shadow">
                 <div class="flex items-start justify-between p-4 border-b rounded-t">
-                    <h3 class="text-xl font-semibold text-gray-900">
-                        Seu carrinho
+                    <h3 class="text-xl font-semibold text-gray-900 pl-2 flex itens-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                        </svg>
+                              
+                        <a>Carrinho</a>
                     </h3>
                     <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="defaultModal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -141,8 +255,11 @@
                 </div>
                 <!-- Modal body -->
                 <div class="p-6 space-y-6">
-                    <ul id="carrinho"></ul>
-
+                    <ul id="carrinho">Nenhum item no carrinho...</ul>
+                    <div class="bg-green-600 p-3 mt-2 text-white rounded-lg w-full flex justify-between">
+                        <a>Total</a>
+                        <a>R$ <span id="total-modal">0.00</span></a>
+                    </div>
                     <button onclick="limparCarrinho()" class="bg-red-500 p-3 mt-2 text-white rounded-lg w-full flex justify-between itens-center">Limpar Carrinho
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75L14.25 12m0 0l2.25 2.25M14.25 12l2.25-2.25M14.25 12L12 14.25m-2.58 4.92l-6.375-6.375a1.125 1.125 0 010-1.59L9.42 4.83c.211-.211.498-.33.796-.33H19.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9.284c-.298 0-.585-.119-.796-.33z" />
