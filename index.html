@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP NO VERCEL</title>
+    <title>Sistema de Carrinho de Compras</title>
+    <script src="./main.js"></script>
 </head>
 <body>
-    <h2>Formulário Simples</h2>
-    <form action="./api/send.php" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" required><br><br>
+    <h1>Produtos</h1>
+    <ul id="lista-produtos">
+        <li>
+            <span>Item 1 - R$ 10.00</span>
+            <button onclick="adicionarAoCarrinho('Item 1', 10.00)">Adicionar ao Carrinho</button>
+            <button style="display: none;" id="removerItem1" onclick="removerDoCarrinho('Item 1', 10.00)">Remover do Carrinho</button>
+        </li>
+        <li>
+            <span>Item 2 - R$ 15.00</span>
+            <button onclick="adicionarAoCarrinho('Item 2', 15.00)">Adicionar ao Carrinho</button>
+            <button style="display: none;" id="removerItem2" onclick="removerDoCarrinho('Item 2', 15.00)">Remover do Carrinho</button>
+        </li>
+        <li>
+            <span>Item 3 - R$ 20.00</span>
+            <button onclick="adicionarAoCarrinho('Item 3', 20.00)">Adicionar ao Carrinho</button>
+            <button style="display: none;" id="removerItem3" onclick="removerDoCarrinho('Item 3', 20.00)">Remover do Carrinho</button>
+        </li>
+    </ul>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required><br><br>
+    <h1>Carrinho de Compras</h1>
+    <ul id="carrinho">
+    </ul>
+    <p>Total: R$ <span id="total-carrinho">0.00</span></p>
 
-        <input type="submit" value="Enviar">
-    </form>
+    <button onclick="limparCarrinho()">Limpar Carrinho</button>
+    <a href="finalizar.html" id="finalizar-pedido">Finalizar Pedido</a>
+
 </body>
 </html>
