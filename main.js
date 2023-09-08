@@ -1,12 +1,3 @@
-// Verifica se o Local Storage é suportado pelo navegador
-function isLocalStorageSupported() {
-    try {
-        return 'localStorage' in window && window['localStorage'] !== null;
-    } catch (e) {
-        return false;
-    }
-}
-
 var carrinho = [];
 var totalCarrinho = 0;
 
@@ -42,15 +33,17 @@ function limparCarrinho() {
 function atualizarCarrinho() {
     var carrinhoElement = document.getElementById("carrinho");
     var totalCarrinhoElement = document.getElementById("total-carrinho");
+    var totalCarrinhoModal = document.getElementById("total-modal");
     var numeroItensCarrinhoElement = document.getElementById("numero-itens-carrinho"); // Novo elemento
 
     carrinhoElement.innerHTML = "";
     carrinho.forEach(function (item) {
-        var li = document.createElement("li");
-        li.innerHTML = `<span>${item.nome} - R$ ${item.preco.toFixed(2)}</span>`;
+        var li = document.createElement("div");
+        li.innerHTML = `<div class="bg-yellow-500 p-2 text-white mb-2 rounded-lg flex justify-between"><a>${item.nome}</a> <a>R$ ${item.preco.toFixed(2)}</a></div>`;
         carrinhoElement.appendChild(li);
     });
 
+    totalCarrinhoModal.innerText = totalCarrinho.toFixed(2);
     totalCarrinhoElement.innerText = totalCarrinho.toFixed(2);
     numeroItensCarrinhoElement.innerText = carrinho.length; // Atualiza o número de itens no carrinho
 }
