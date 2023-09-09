@@ -1,6 +1,14 @@
 var carrinho = [];
 var totalCarrinho = 0;
 
+function isLocalStorageSupported() {
+    try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+    } catch (e) {
+        return false;
+    }
+}
+
 function adicionarAoCarrinho(nome, preco) {
     carrinho.push({ nome: nome, preco: preco });
     totalCarrinho += preco;
@@ -34,7 +42,7 @@ function atualizarCarrinho() {
     var carrinhoElement = document.getElementById("carrinho");
     var totalCarrinhoElement = document.getElementById("total-carrinho");
     var totalCarrinhoModal = document.getElementById("total-modal");
-    var numeroItensCarrinhoElement = document.getElementById("numero-itens-carrinho"); // Novo elemento
+    var numeroItensCarrinhoElement = document.getElementById("numero-itens-carrinho");
 
     carrinhoElement.innerHTML = "";
     carrinho.forEach(function (item) {
@@ -45,7 +53,7 @@ function atualizarCarrinho() {
 
     totalCarrinhoModal.innerText = totalCarrinho.toFixed(2);
     totalCarrinhoElement.innerText = totalCarrinho.toFixed(2);
-    numeroItensCarrinhoElement.innerText = carrinho.length; // Atualiza o número de itens no carrinho
+    numeroItensCarrinhoElement.innerText = carrinho.length; 
 }
 
 function atualizarBotoesRemover() {
@@ -89,3 +97,7 @@ window.onload = function () {
         }
     }
 };
+
+function finalizarPedido(){
+    window.location.href = "finalizar.html";
+}

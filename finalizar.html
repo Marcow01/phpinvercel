@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Finalizar Pedido</title>
+    <title>Finalizar pedido</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body>
-    <h1>Itens do Carrinho</h1>
-    <ul id="itens-carrinho">
-    </ul>
-    <p>Total: R$ <span id="total-carrinho">0.00</span></p>
+    <header class="p-4 flex justify-center bg-yellow-500">
+        <div class="flex justify-between text-white w-full max-w-screen-lg p-5">
+            <a class="font-bold">pizzaria</a>
+            <a class="font-bold">finalizar pedido</a>
+        </div>
+    </header>
 
-    <script>
-        var carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-        var totalCarrinho = parseFloat(localStorage.getItem("totalCarrinho")) || 0;
-
-        var carrinhoElement = document.getElementById("itens-carrinho");
-        var totalCarrinhoElement = document.getElementById("total-carrinho");
-
-        carrinhoElement.innerHTML = "";
-        carrinho.forEach(function (item) {
-            var li = document.createElement("li");
-            li.innerHTML = item.nome + ' - R$ ' + item.preco.toFixed(2);
-            carrinhoElement.appendChild(li);
-        });
-
-        totalCarrinhoElement.innerText = totalCarrinho.toFixed(2);
-    </script>
+    <main class="flex justify-center mt-10 py-10">
+        <section class="text-gray-600 body-font max-w-screen-lg">
+            <div class="container px-5 mx-auto">
+                <div class="py-3 mb-3 w-full border-b">Carrinho</div>
+                <ul id="carrinho" class="space-y-2"></ul>
+                <div class="bg-green-600 p-2 mt-2 text-white rounded-lg w-full flex justify-between">
+                    <span>Total:</span>
+                    <span id="total">R$ 0.00</span>
+                </div>
+                <button onclick="limparCarrinho()" class="bg-red-500 p-3 mt-2 text-white rounded-lg w-full flex justify-between itens-center">Limpar Carrinho
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75L14.25 12m0 0l2.25 2.25M14.25 12l2.25-2.25M14.25 12L12 14.25m-2.58 4.92l-6.375-6.375a1.125 1.125 0 010-1.59L9.42 4.83c.211-.211.498-.33.796-.33H19.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9.284c-.298 0-.585-.119-.796-.33z" />
+                    </svg>
+                </button>
+                <div class="flex items-center mt-2 border-t border-gray-200 rounded-b">
+                    <button data-modal-hide="defaultModal" type="button" class="text-white bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Finalizar Pedido</button>
+                    <button data-modal-hide="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Continuar Comprando</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="./validar.js"></script>
 </body>
 </html>
